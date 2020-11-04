@@ -2,6 +2,7 @@ from typing import Dict, List, Union
 
 from db import db
 
+
 # ItemJSON = Dict[str, Union[int, str, float]]
 
 
@@ -14,6 +15,7 @@ class ItemModel(db.Model):
 
     store_id = db.Column(db.Integer, db.ForeignKey("stores.id"))
     store = db.relationship("StoreModel")
+
     #
     # def __init__(self, name: str, price: float, store_id: int):
     #     self.name = name
