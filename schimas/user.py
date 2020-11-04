@@ -1,8 +1,9 @@
 from ma import ma
 from models.user import UserModel
 
-class UserSchema(ma.MoedlSchema):
+
+class UserSchema(ma.ModelSchema):
     class Meta:
-        model=UserModel
+        model = UserModel
         load_only = ("password",)
-        dump_only=("id",)
+        dump_only = ("id", "activated",)
